@@ -28,13 +28,6 @@ function App() {
     console.log("codigo después de llamada de axios");
   }, []);
 
-  useEffect(() => {
-    console.log(pokemons);
-    if (pokemons.length > 0) {
-      alert("hola, ya he cargado la info");
-    }
-  }, [pokemons]);
-
   console.log("después del useEffect");
 
   return (
