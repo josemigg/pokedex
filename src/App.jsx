@@ -8,7 +8,6 @@ const getImage = (number) => {
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
-  console.log("antes del useEffect");
 
   useEffect(() => {
     const apiURL = "https://pokeapi.co/api/v2/pokemon?limit=151";
