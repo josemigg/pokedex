@@ -8,14 +8,11 @@ const getImage = (number) => {
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
-  console.log("antes del useEffect");
 
   useEffect(() => {
     const apiURL = "https://pokeapi.co/api/v2/pokemon?limit=151";
-    console.log("codigo antes de llamada de axios");
 
     axios.get(apiURL).then((response) => {
-      console.log("dentro del then");
       const normalizedResults = response.data.results.map((element, index) => {
         return {
           ...element,
@@ -25,10 +22,7 @@ function App() {
       });
       setPokemons(normalizedResults);
     });
-    console.log("codigo después de llamada de axios");
   }, []);
-
-  console.log("después del useEffect");
 
   return (
     <div className="pokemons">
