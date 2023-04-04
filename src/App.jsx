@@ -38,9 +38,9 @@ function App() {
   console.log("después del useEffect");
 
   return (
-    <div class="pokemons">
+    <div className="pokemons">
       {pokemons.map((element) => (
-        <div class="pokemon" key={element.name}>
+        <div className="pokemon" key={element.name}>
           <img src={element.imageUrl} />
           <p>{element.name}</p>
           <p>number: {element.number}</p>
