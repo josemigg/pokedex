@@ -9,7 +9,6 @@ const getImage = (number) => {
 function App() {
   const [pokemons, setPokemons] = useState([]);
 
-
   useEffect(() => {
     const apiURL = "https://pokeapi.co/api/v2/pokemon?limit=151";
     console.log("codigo antes de llamada de axios");
