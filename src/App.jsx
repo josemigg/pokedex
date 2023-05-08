@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import PokemonListItem from "./PokemonListItem";
 import "./App.css";
 
 const getImage = (number) => {
@@ -32,11 +33,12 @@ function App() {
   return (
     <div className="pokemons">
       {pokemons.map((element) => (
-        <div className="pokemon" key={element.name}>
-          <img src={element.imageUrl} />
-          <p>{element.name}</p>
-          <p>number: {element.number}</p>
-        </div>
+        <PokemonListItem
+          key={element.name}
+          imageUrl={element.imageUrl}
+          name={element.name}
+          number={element.number}
+        />
       ))}
     </div>
   );
