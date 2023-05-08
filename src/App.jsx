@@ -37,6 +37,7 @@ function App() {
           key={element.name}
           imageUrl={element.imageUrl}
           name={element.name}
+          number={element.number}
         />
       ))}
     </div>
