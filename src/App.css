@@ -10,3 +10,9 @@
   padding: 20px;
   border-radius: 12px;
 }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}

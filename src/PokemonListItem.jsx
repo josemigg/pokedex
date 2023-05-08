@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 const PokemonListItem = (props) => {
   return (
-    <div className="pokemon">
+    <Link className="pokemon" to={`/pokemon/${props.number}`}>
       <img src={props.imageUrl} />
       <p>{props.name}</p>
       <p>number: {props.number}</p>
-    </div>
+    </Link>
   );
 };
 
