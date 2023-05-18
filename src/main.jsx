@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import PokemonList from "./PokemonList";
+import PokemonTypes from "./PokemonTypes";
 import PokemonDetails from "./PokemonDetails";
-import ProjectDetails from "./ProjectDetails";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -15,12 +15,12 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <PokemonList /> },
       {
-        path: "pokemon/:pokemonId",
-        element: <PokemonDetails />,
+        path: "/types",
+        element: <PokemonTypes />,
       },
       {
-        path: "projects/:projectId",
-        element: <ProjectDetails />,
+        path: "pokemon/:pokemonId",
+        element: <PokemonDetails />,
       },
     ],
   },
